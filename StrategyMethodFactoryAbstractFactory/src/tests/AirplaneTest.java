@@ -3,20 +3,11 @@
  */
 package tests;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import vehicles.AirPlaneFactory;
 import vehicles.Airplane;
-
-import vehicles.Flying;
-import vehicles.HarrierFactory;
-import vehicles.ModelAirPlaneFactory;
-import vehicles.PassengerPlaneFactory;
-
-import vehicles.LiftOff;
 
 
 /**
