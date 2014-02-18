@@ -6,46 +6,33 @@ import vehicles.FlyingFactory;
 import vehicles.LiftOff;
 import vehicles.LiftOffFactory;
 
-public class HarrierBuilder implements Builder {
+public class ModelBuilder implements Builder {
 
 	private Airplane airplane;
 	private Flying flying;
 	private LiftOff liftoff;
 
-	/* (non-Javadoc)
-	 * @see tests.Builder#getAirplane()
-	 */
 	@Override
 	public Airplane getAirplane() {
 		return airplane;
 	}
 
-	/* (non-Javadoc)
-	 * @see tests.Builder#buildFlying()
-	 */
 	@Override
 	public void buildFlying() {
-		flying =  FlyingFactory.createFlying("Fighter Jet");
-		
+		flying =  FlyingFactory.createFlying("Model Airplane");
+
 	}
 
-	/* (non-Javadoc)
-	 * @see tests.Builder#buildLiftOff()
-	 */
 	@Override
 	public void buildLiftOff() {
-		liftoff =  LiftOffFactory.createLiftOff("Vertically");
-		
+		liftoff =  LiftOffFactory.createLiftOff("don't");
+
 	}
 
-	/* (non-Javadoc)
-	 * @see tests.Builder#buildAirplane()
-	 */
 	@Override
 	public void buildAirplane() {
-		
 		airplane = new Airplane(liftoff, flying);
-		
+
 	}
 
 }
