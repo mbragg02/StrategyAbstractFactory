@@ -33,13 +33,21 @@ public class AirplaneTest {
 		String expectedOutput = "Like a fighter jet";
 		String stringReturned = null;
 		
-		AirPlaneFactory harrierFactory = new HarrierFactory();
+//		AirPlaneFactory harrierFactory = new HarrierFactory();
+//		
+//		Flying fly = harrierFactory.createFlying();
+//
+//		LiftOff liftOff = harrierFactory.createLiftOff();
+//
+//		Airplane classUnderTest = new Airplane(liftOff,fly);
 		
-		Flying fly = harrierFactory.createFlying();
-
-		LiftOff liftOff = harrierFactory.createLiftOff();
-
-		Airplane classUnderTest = new Airplane(liftOff,fly);
+		Builder builder = new HarrierBuilder(); 
+		
+		Director director = new Director(builder); 
+		
+		director.constructAirplane();
+		
+		Airplane classUnderTest = builder.getAirplane();
 
 		stringReturned = classUnderTest.howDoYouFly();
 
